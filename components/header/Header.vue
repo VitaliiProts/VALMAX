@@ -25,8 +25,8 @@
           <!--       // TODO можна винести в окремий компонент -->
           <ul data-aos="flip-right" class="social-network">
             <li class="social-network__item" v-for="(item, key) in items" :key="key">
-              <a class="test1" :href="item.href" target="_blank">
-                <img class="test2" :src="item.icon" :alt="item.alt">
+              <a :href="item.href" target="_blank">
+                <img :src="item.icon" :alt="item.alt">
               </a>
             </li>
           </ul>

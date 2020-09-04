@@ -7,9 +7,8 @@
       </div>
     </transition>
     <transition name="fade">
-      <ul v-if="active">
-<!--        <li v-for="item in items" :key="item">{{ item }}</li>-->
-      </ul>
+<!--      // TODO доробити компонент-->
+<!--      <modal-menu v-if="active" />-->
     </transition>
   </nav>
 </template>

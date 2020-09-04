@@ -1,3 +1,5 @@
+import ModalMenu from '@/components/modal-menu/ModalMenu.vue';
+
 export default {
   data: () => ({
     active: false,
@@ -9,4 +11,5 @@ export default {
       'Контакти'
     ]
   }),
+  components: {ModalMenu}
 }
