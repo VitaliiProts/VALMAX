@@ -1,0 +1,188 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #1C1C1C 50%, $colorWhite 50%);
+
+  &__inner {
+    display: flex;
+
+    &-block {
+      text-align: center;
+      width: 50%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      flex-direction: column;
+
+      &--left {
+        max-width: 340px;
+        margin: 0 auto;
+      }
+
+      &--right {
+
+      }
+    }
+
+    &-img {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      > img {
+        width: 243px;
+        height: 495px;
+        z-index: 2;
+      }
+
+      .figure {
+        position: relative;
+
+        &::after {
+          @include figure(406px, 405px, url(~@/assets/img/ellipse.svg) no-repeat, -323px, null, 37px, null);
+          z-index: 1;
+        }
+
+        &::before {
+          @include figure(110px, 60px, url(~@/assets/img/figura3.svg) no-repeat, null, 265px, 56px, null);
+        }
+      }
+
+      .figure2 {
+        position: relative;
+
+        &::after {
+          @include figure(105px, 100px, url(~@/assets/img/figura-triangle.svg) no-repeat, 20px, null, -45px, null);
+        }
+
+        &::before {
+          @include figure(185px, 175px, url(~@/assets/img/bgcircles.svg) no-repeat, null, -80px, 30px, null);
+        }
+      }
+
+      .figure3 {
+        position: relative;
+
+        &::after {
+          @include figure(73px, 73px, url(~@/assets/img/figura5.svg) no-repeat, 35px, null, null, 50px);
+        }
+
+        &::before {
+          @include figure(73px, 73px, url(~@/assets/img/figura-square.svg) no-repeat, null, 250px, -18px, null);
+        }
+      }
+
+      &::before {
+        @include figure(185px, 177px, url(~@/assets/img/bgcircles.svg) no-repeat, 264px, null, null, 14px);
+      }
+
+      &::after {
+        @include figure(115px, 110px, url(~@/assets/img/figura-circle.svg) no-repeat, 191px, null, null, -5px);
+      }
+
+    }
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-left: -15px;
+
+    > h1 {
+      background: linear-gradient(56.74deg, #0084FF 16.49%, #2BF6E7 79.83%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    > h2 {
+      color: #1C1C1C;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #fff;
+    }
+  }
+
+  &__subtitle {
+    text-align: left;
+
+    > p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+  }
+}
+
+// TODO поправити
+.mouse {
+  &::after {
+    content: '';
+    border-left: 0.5px solid #949494;
+    height: 37%;
+    left: 61px;
+    position: absolute;
+    top: 8%;
+  }
+
+  &::before {
+    content: '';
+    border-left: 0.5px solid #949494;
+    height: 50%;
+    left: 61px;
+    position: absolute;
+    top: 50%;
+    margin-top: 2px;
+  }
+
+  > img {
+    position: absolute;
+    top: 45%;
+    left: 36px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 800px) {
+  .intro {
+    background: #1C1C1C;
+
+    .mouse {
+      display: none;
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      text-align: center;
+
+      > p {
+        font-size: 17px;
+      }
+    }
+
+    &__inner {
+      display: flex;
+
+      &-block {
+        width: unset;
+
+        &--right {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+}

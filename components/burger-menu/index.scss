@@ -1,0 +1,112 @@
+.menu {
+  cursor: pointer;
+  width: 42px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-icon {
+    width: 42px;
+    height: 1.27px;
+    background-color: $colorBlack;
+    position: relative;
+    border-radius: 30px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 42px;
+      height: 1.27px;
+      background-color: $colorBlack;
+      position: absolute;
+      left: 0;
+      top: -7px;
+      border-radius: 30px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 42px;
+      height: 1.27px;
+      background-color: $colorBlack;
+      position: absolute;
+      left: 0;
+      top: 7px;
+      border-radius: 30px;
+    }
+    &--active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 27px;
+      background-color: transparent;
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+        width: 27px;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+        width: 27px;
+      }
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    &-icon {
+      width: 34px;
+      background-color: $colorWhite;
+      left: 20px;
+
+      &::before {
+        background-color: $colorWhite;
+        left: -8px;
+      }
+      &::after {
+        width: 26px;
+        background-color: $colorWhite;
+        left: 8px;
+      }
+      &--active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 17px;
+        background-color: transparent;
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+          width: 26px;
+          left: 0;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          top: 0;
+          width: 26px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+}

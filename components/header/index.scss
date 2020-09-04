@@ -1,0 +1,133 @@
+.container {
+  color: $colorWhite;
+  padding: 0 44px;
+  //max-width: 1920px;
+  //margin: 0 auto;
+}
+
+.header {
+  position: fixed; // absolute
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  &__logo {
+    flex: 1;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+
+  &__link {
+    > a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+.nav {
+  font-size: 16px;
+  margin-right: 37px;
+
+  &__link {
+    position: relative;
+    color: $colorBlack;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    &:hover:after {
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -13px;
+      top: 50%;
+      margin-top: -2px;
+      width: 8px;
+      height: 8px;
+      background: linear-gradient(56.74deg, #0084FF 16.49%, #2BF6E7 79.83%);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+}
+
+.lang {
+  position: absolute;
+  color: #C8C8C8;
+  flex-wrap: wrap;
+  top: 65px;
+  right: 45px;
+  line-height: 24px;
+
+  &__item {
+    &:hover {
+      cursor: pointer;
+      color: $colorBlack;
+    }
+  }
+}
+
+.social-network {
+  position: absolute;
+  flex-wrap: wrap;
+  bottom: -820px; // -820px
+  right: 40px;
+
+  &__item {
+    padding: 6px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+
+    &:hover {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 22px;
+      vertical-align: middle;
+      padding: 6px;
+      background: linear-gradient(56.74deg, #0084FF 16.49%, #2BF6E7 79.83%);;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    font-size: 16px;
+    margin-right: 17px;
+
+    &__link {
+      position: relative;
+      color: $colorWhite;
+    }
+  }
+  .social-network {
+    display: none;
+  }
+  .lang {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+}

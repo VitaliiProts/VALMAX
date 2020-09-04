@@ -1,0 +1,11 @@
+@mixin figure ($width, $height, $background, $left, $right, $top, $bottom) {
+  content: '';
+  position: absolute;
+  width: $width;
+  height: $height;
+  background: $background;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+}
