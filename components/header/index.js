@@ -9,7 +9,6 @@ import behanceNetwork from '@/assets/img/behance-network.svg';
 
 export default {
   data: () => ({
-    show: true,
     languages: [
       { name: 'ru' },
       { name: 'ua' },
@@ -43,8 +42,5 @@ export default {
       },
     ]
   }),
-  mounted() {
-    this.show = false;
-  },
   components: { BurgerMenu }
 }
